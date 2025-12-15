@@ -50,9 +50,11 @@ const ChatWidget = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Trigger scroll whenever messages change or "isWaiting" status changes
   useEffect(() => {
     scrollToBottom();
+    document.querySelectorAll('textarea').forEach((el) => {
+      el.focus({ preventScroll: true });
+    });
   }, [messages, isWaiting]);
 
   const styles = {
