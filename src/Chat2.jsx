@@ -85,7 +85,7 @@ const ChatWidget = () => {
         }}
         onClick={toggleChat}
       >
-        {isOpen ? "Close Chat" : "Open Chat"}
+        
       </button>
 
       <div
